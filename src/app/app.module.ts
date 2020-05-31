@@ -62,7 +62,7 @@ import { UploadComponent } from './upload/upload.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDdSAnHIs9l4jTCGgB0hPTKJqLMSzZODyE'
+      apiKey: ''
     }),
     MatGoogleMapsAutocompleteModule,
     AgmCoreModule.forRoot()
