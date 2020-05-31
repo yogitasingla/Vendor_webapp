@@ -1,0 +1,21 @@
+
+<div class='header'>
+
+     <h3>Please type the verification code send to your number</h3>
+</div>
+
+
+    <mat-card>
+  <div class="container">
+      <div class="verify-container">
+<ng-otp-input class="otp"   [config]="{length:5}"></ng-otp-input>
+
+<button mat-raised-button color="primary" id="verifyButton"
+ class="btn custom-button align-content-md-center"  type="submit" (click)="verifyotp()">Submit</button>
+</div>
+</div>
+
+
+<h4 class="otp">Resend the OTP</h4>
+</mat-card>
+

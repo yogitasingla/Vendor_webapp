@@ -1,0 +1,40 @@
+
+ <div class="row form-group col-12 mt-4">
+
+  <div class='header'>
+      <!-- <h1>Welcome to Grocery hub</h1> -->
+       <h3>To continue please enter your mobile no</h3>
+  </div>
+
+
+      <mat-card>
+    <div class="container">
+        <div class="verify-container">
+      <mat-form-field>
+        <span matPrefix>+91 &nbsp;</span>
+        <input  type="tel" matInput placeholder="Mobile_no"  [formControl]="phoneFormControl"
+        [errorStateMatcher]="matcher"
+          maxlength="10"  [(ngModel)]="phone_no"
+
+           >
+           <mat-icon matSuffix>phone</mat-icon>
+
+         <mat-error *ngIf="phoneFormControl.hasError('pattern') && !phoneFormControl.hasError('required')">
+          Please enter a valid Mobile no
+        </mat-error>
+        <mat-error *ngIf="phoneFormControl.hasError('required')">
+          phone no is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" id="verifyButton"
+      [disabled]="phoneFormControl.hasError('pattern') || phoneFormControl.hasError('required')"
+      class="btn custom-button align-content-md-center" type="submit" (click)="verify()">VERIFY</button>
+
+    </div>
+
+    </div>
+    <h4 class="otp">We will send you One time SMS message for verifying your number</h4>
+      </mat-card>
+    </div>
+

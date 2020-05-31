@@ -1,0 +1,103 @@
+
+ <!-- <agm-map [latitude]="lat" [longitude]="lng"></agm-map> -->
+ <!-- <agm-map 
+[latitude]="latitude" 
+[longitude]="longitude" 
+[zoom]="zoom" >
+  <agm-marker 
+  [latitude]="latitude" 
+  [longitude]="longitude"></agm-marker>
+</agm-map>
+  -->
+<div class="container">
+    <mat-form-field id="input">
+        <mat-label>Enter Address</mat-label>
+      <input  matInput placeholder="Search your shop location" 
+      (keydown.enter)="$event.preventDefault()"
+      autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search
+      [(ngModel)]="address"[ngModelOptions]="{standalone:true}">
+    </mat-form-field>
+
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+      <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+        (dragEnd)="markerDragEnd($event)"></agm-marker>
+    </agm-map>
+   
+    <h5>Address: {{address}}</h5>
+    <div>Latitude: {{latitude}}</div>
+    <div>Longitude: {{longitude}}</div>
+  </div>
+
+<div class="row form-group col-12 mt-4">
+   
+    <div class='header'>
+      
+         <h3>To continue please Enter your Correct Address </h3> 
+    </div>
+    <div class="container">
+        <div class="registration-container">   
+<mat-card>
+    <mat-form-field class="input">
+        <mat-label>Shop Name</mat-label>
+        <input matInput required [(ngModel)]="shop_name"[ngModelOptions]="{standalone:true}">
+      </mat-form-field>
+    <div>
+        <mat-form-field class="input1">
+            <mat-label>First name</mat-label>
+          <input matInput required placeholder="Shop Owner Name" [(ngModel)]="first_name"[ngModelOptions]="{standalone:true}">
+        </mat-form-field>
+      
+        <mat-form-field class="input2">
+            <mat-label> Last Name</mat-label>
+          <input matInput required placeholder="Last Name"[(ngModel)]="last_name"[ngModelOptions]="{standalone:true}" >
+        </mat-form-field>
+      </div>
+
+        <mat-form-field class="input">
+          <mat-label>Address</mat-label>
+          <textarea matInput required placeholder="Ex. 100 Main St" [(ngModel)]="address"[ngModelOptions]="{standalone:true}"></textarea>
+        </mat-form-field>
+        <div>
+            <mat-form-field class="input3">
+                <mat-label>City</mat-label>
+              <input matInput required placeholder="city" [(ngModel)]="city"[ngModelOptions]="{standalone:true}" >
+            </mat-form-field>
+            <mat-form-field class="input4">
+                <mat-label>State</mat-label>
+              <input matInput required placeholder="state"[(ngModel)]="state"[ngModelOptions]="{standalone:true}">
+            </mat-form-field>
+            <mat-form-field class="input5">
+                <mat-label>PIN Code</mat-label>
+              <input matInput  required placeholder="pin code" maxlength="6"[(ngModel)]="pin_code"[ngModelOptions]="{standalone:true}">
+             
+            </mat-form-field>
+            
+            
+          </div>
+    
+          <mat-form-field class="input">
+            <span matPrefix>+91 &nbsp;</span>
+            <input  type="tel" matInput placeholder="Shop Mobile_no"  [formControl]="phoneFormControl"
+            [errorStateMatcher]="matcher"
+              maxlength="10"  [(ngModel)]="phone_no">
+               <mat-icon matSuffix>phone</mat-icon>
+              
+             <mat-error *ngIf="phoneFormControl.hasError('pattern') && !phoneFormControl.hasError('required')">
+              Please enter a valid Mobile no
+            </mat-error>
+            <mat-error *ngIf="phoneFormControl.hasError('required')">
+              phone no is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <button align="center" mat-raised-button color="primary"
+           id="rsButton" [disabled]="!shop_name ||!first_name ||!address || !last_name || !state || !city || !pin_code || !phone_no  "
+            type="submit" (click)="submit()">Submit</button>
+    
+          <p class=error>{{errorMsg}}</p>
+         
+        
+       
+</mat-card>
+</div>
+</div>
+</div>

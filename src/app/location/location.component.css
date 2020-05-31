@@ -1,0 +1,54 @@
+
+  agm-map {
+    height: 300px;
+  }
+    mat-card{
+      width: 80%;
+      margin: auto;
+    }
+    .registration-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .header{
+      text-align: center;
+      color: teal;
+    }
+    .input{
+      width: 100%;
+    }
+    #input{
+      width: 80%;
+      margin-left:8.2%;
+      margin-top:3%;
+      margin-bottom:3%;
+    }
+    .input1{
+      width: 48%;
+    }
+    .input2{
+      margin-left:5px;
+      width: 50%;
+    }
+    .input3{
+      width: 32%;
+    }
+    .input4{
+      width: 32%;
+      margin-left:4px;
+    }
+    .input5{
+      width: 32%;
+      margin-left:4px;
+    }
+     #verifyButton{
+    margin-top:5%; 
+    width: 50%;
+    align-self: center;
+  }
+  #rsButton{
+    margin:auto;
+  display:block;
+    
+  }
+  

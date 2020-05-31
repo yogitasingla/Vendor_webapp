@@ -1,0 +1,59 @@
+mat-card{
+    width: 80%;
+    
+    position: fixed;
+    text-align: center;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  }
+
+
+  
+
+  .header{
+      text-align: center;
+      color: teal;
+      
+  }
+  .otp{
+    text-align: center;
+    color:red;
+    font-family: Georgia ;
+    margin-top: 50px;
+}
+#verifyButton{
+  margin-top:5%; 
+  width: 50%;
+  align-self: center;
+}mat-card{
+    width: 80%;
+    
+    position: fixed;
+    text-align: center;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  }
+
+
+  
+
+  .header{
+      text-align: center;
+      color: teal;
+      
+  }
+  .otp{
+    text-align: center;
+    color:red;
+    font-family: Georgia ;
+    margin-top: 50px;
+}
+#verifyButton{
+  margin-top:5%; 
+  width: 50%;
+  align-self: center;
+}
